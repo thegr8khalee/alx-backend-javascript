@@ -5,5 +5,5 @@ export default function createIteratorObject(report) {
         yield employee;
       }
     }
-  })();
+  })(); // Move the invocation inside the parentheses
 }
