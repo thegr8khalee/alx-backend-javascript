@@ -10,7 +10,7 @@ export default class HolbertonCourse {
   }
 
   get length() {
-    return this._lenght;
+    return this._length;
   }
 
   get students() {
@@ -29,7 +29,7 @@ export default class HolbertonCourse {
     if (typeof value != 'number') {
       throw new TypeError('Length must be a numbe');
     } else {
-      this._lenght = value;
+      this._length = value;
     }
   }
 
