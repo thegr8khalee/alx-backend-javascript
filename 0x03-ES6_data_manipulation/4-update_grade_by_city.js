@@ -8,10 +8,9 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
         id: student.id,
         firstName: student.firstName,
         location: student.location,
-        grade: (
-          newGrades.filter((grade) => grade.studentId === student.id).pop() ||
-          defaultGrade
-        ).grade,
+        grade: (newGrades
+          .filter((grade) => grade.studentId === student.id)
+          .pop() || defaultGrade).grade,
       }));
   }
   return [];
