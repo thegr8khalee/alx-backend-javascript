@@ -48,5 +48,4 @@ const readDatabase = (dataPath) =>
     }
   });
 
-export default readDatabase;
 module.exports = readDatabase;
