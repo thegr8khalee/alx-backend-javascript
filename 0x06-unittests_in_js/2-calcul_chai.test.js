@@ -1,7 +1,14 @@
-const { expect } = require('chai');
 const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', () => {
+  let expect;
+
+  before(async () => {
+    // Dynamically import chai
+    const chai = await import('chai');
+    expect = chai.expect;
+  });
+
   it('should return 6 for SUM with 1.4 and 4.5', () => {
     expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
   });
@@ -27,7 +34,7 @@ describe('calculateNumber', () => {
   });
 
   it('should handle negative numbers correctly for SUM', () => {
-    expect(calculateNumber('SUM', -1.4, -2.6)).to.equal(4);
+    expect(calculateNumber('SUM', -1.4, -2.6)).to.equal(-4);
   });
 
   it('should handle negative numbers correctly for SUBTRACT', () => {
