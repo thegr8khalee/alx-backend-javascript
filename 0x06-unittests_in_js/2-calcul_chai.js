@@ -1,22 +1,14 @@
 const calculateNumber = (type, a, b) => {
-  const a1 = Math.round(a);
-  const b1 = Math.round(b);
-  const sum = a1 + b1;
-  const sub = a1 - b1;
-  // const divide = a1 / b1;
-
   if (type === 'SUM') {
-    return sum;
-  } else if (type === 'SUBTRACT') {
-    return sub;
-  } else if (type === 'DIVIDE') {
-    if (b != 0) {
-      const divide = a1 / b1;
-      return divide;
-    } else {
-      return 'ERROR';
-    }
+    return Math.round(a) + Math.round(b);
   }
+  if (type === 'SUBTRACT') {
+    return Math.round(a) - Math.round(b);
+  }
+  if (type === 'DIVIDE') {
+    return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
+  }
+  return 0;
 };
 
 module.exports = calculateNumber;
