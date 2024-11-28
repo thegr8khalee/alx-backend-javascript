@@ -11,7 +11,7 @@ const calculateNumber = (type, a, b) => {
     return sub;
   } else if (type === 'DIVIDE') {
     if (b != 0) {
-      const divide = Math.round(a1 / b1);
+      const divide = a1 / b1;
       return divide;
     } else {
       return 'ERROR';

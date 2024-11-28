@@ -18,8 +18,8 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber('SUBTRACT', 2.5, 2.5), 0);
   });
 
-  it('should return 2 for DIVIDE with 2.5 and 2.0', () => {
-    assert.strictEqual(calculateNumber('DIVIDE', 2.5, 2.0), 2);
+  it('should return 1.5 for DIVIDE with 2.5 and 2.0', () => {
+    assert.strictEqual(calculateNumber('DIVIDE', 2.5, 2.0), 1.5);
   });
 
   it('should return "ERROR" for DIVIDE by 0', () => {
@@ -35,7 +35,7 @@ describe('calculateNumber', () => {
   });
 
   it('should handle large numbers correctly for DIVIDE', () => {
-    assert.strictEqual(calculateNumber('DIVIDE', 12345.6, 123.0), 100.0);
+    assert.strictEqual(calculateNumber('DIVIDE', 12345.6, 123.0), 100.3739837398374);
   });
 
   it('should return "ERROR" for DIVIDE by 0 with large numbers', () => {
